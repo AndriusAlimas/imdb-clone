@@ -1,0 +1,57 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 0.625rem 1.25rem; 
+  }
+  
+  .hamburger-menu {
+    font-size: 1.5rem; 
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    margin: 0 1.25rem; 
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.5rem; 
+    border: none;
+    border-radius: 0.3125rem; 
+  }
+  
+  .auth-buttons button {
+    background-color: #f5c518;
+    border: none;
+    border-radius: 0.3125rem;
+    padding: 0.625rem 0.9375rem; 
+    margin-left: 0.625rem; 
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .auth-buttons button:hover {
+    background-color: #dbac07;
+  }
+  
+  .logo img {
+    height: 3rem; 
+    width: auto;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 37.5rem) { 
+    .search-bar {
+      display: none; /* Hide search bar on smaller screens */
+    }
+  }
+  
