@@ -1,10 +1,16 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MovieList from "./components/MovieList/MovieList";
+
 function App() {
   return (
-    <Router>
-      <Routes>{/* TODO include ROUTES! */}</Routes>
-    </Router>
+    <div className="App">
+      <header>
+        <h1>IMDb Clone</h1>
+      </header>
+      <main>
+        <MovieList />
+      </main>
+    </div>
   );
 }
 
