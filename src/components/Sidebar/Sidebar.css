@@ -7,9 +7,11 @@
     height: 100%;
     background: #333; 
     transition: left 0.3s ease;
+    z-index:100;
   }
   .sidebar.active {
     left: 0;
+
   }
   .close-sidebar {
     display: block; 
@@ -30,6 +32,7 @@
     list-style-type: none;
     padding: 0;
     margin-top: 1rem; 
+  
   }
   
   .sidebar-menu li {

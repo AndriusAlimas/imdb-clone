@@ -1,0 +1,20 @@
+.slick-slider {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; /* Adjust based on your design */
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .slick-dots {
+    bottom: 10px; /* Position dots at the bottom of the slider */
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
