@@ -4,7 +4,6 @@ import "./FeaturedSlider.css";
 
 const FeaturedSlider = ({ content }) => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -12,6 +11,9 @@ const FeaturedSlider = ({ content }) => {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    adaptiveHeight: true,
+    arrows: true,
+    dots: false,
   };
 
   return (

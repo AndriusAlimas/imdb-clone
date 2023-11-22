@@ -1,20 +1,32 @@
-.slick-slider {
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto; /* Adjust based on your design */
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust the height as needed */
   }
+  
   
   .slick-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    max-width: 100%; /* Ensure the image width doesn't exceed the container */
+    max-height: 80%; /* Maximum image height to match the slide's height */
+    object-fit: contain; /* Ensures the entire image is visible */
+    margin: auto; /* Center the image within the slide */
   }
   
-  .slick-dots {
-    bottom: 10px; /* Position dots at the bottom of the slider */
-  }
-  
+
   .slick-prev, .slick-next {
-    z-index: 1;
+    color: azure;
+    font-size: 50rem; /* Adjust the size */
+    z-index: 1; /* Make sure arrows are above other elements */
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    color: green; /* Color of the arrows */
+  }
+
+  
+  /* If arrows are not visible, you might need to increase the z-index */
+  .slick-prev, .slick-next {
+    z-index: 1000;
   }
