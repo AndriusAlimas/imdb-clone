@@ -1,46 +1,47 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    padding: 0.625rem 1.25rem; 
+.header {
+  background-color: #000; /* Example background color */
+  color: #fff; /* Example text color */
+}
+
+.header-content {
+  max-width: 1200px; /* Adjust based on your preference */
+  margin: 0 auto; /* This centers the header content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This distributes space around items */
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.logo img {
+  height: 50px; /* Adjust based on your logo's size */
+}
+
+.auth-buttons button {
+  background-color: transparent; /* Clear background */
+  border: 1px solid #f5c518; /* Yellow border, similar to IMDb's color */
+  color: #f5c518; /* Text color similar to border */
+  padding: 0.625rem 0.9375rem;
+  margin-left: 0.625rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.auth-buttons button:hover {
+  background-color: #f5c518; /* Background color on hover */
+  color: #000; /* Text color on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .hamburger-menu {
-    font-size: 1.5rem; 
-    cursor: pointer;
+
+  .logo, .auth-buttons {
+    margin-bottom: 10px;
   }
-  
-  .logo {
-    font-size: 1.5rem; 
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  
-  .auth-buttons button {
-    background-color: #f5c518;
-    border: none;
-    border-radius: 0.3125rem;
-    padding: 0.625rem 0.9375rem; 
-    margin-left: 0.625rem; 
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .auth-buttons button:hover {
-    background-color: #dbac07;
-  }
-  
-  .logo img {
-    height: 3rem; 
-    width: auto;
-  }
-  /* Responsive adjustments */
-  @media (max-width: 37.5rem) { 
-    .search-bar {
-      display: none; /* Hide search bar on smaller screens */
-    }
-  }
-  
+}

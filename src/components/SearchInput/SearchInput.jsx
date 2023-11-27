@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./SearchInput.css";
 const SearchInput = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedTerm, setDebouncedTerm] = useState(searchTerm);
@@ -25,12 +25,14 @@ const SearchInput = ({ onSearch }) => {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="Search..."
-      value={searchTerm}
-      onChange={handleInputChange}
-    />
+    <div className="search-bar">
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
+    </div>
   );
 };
 

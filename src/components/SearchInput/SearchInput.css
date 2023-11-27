@@ -1,6 +1,6 @@
 .search-bar {
     flex-grow: 1;
-    margin: 0 1.25rem; 
+    margin: 0 12%; 
   }
   
   .search-bar input {
@@ -9,4 +9,4 @@
     border: none;
     border-radius: 0.3125rem; 
   }
-  
+ 

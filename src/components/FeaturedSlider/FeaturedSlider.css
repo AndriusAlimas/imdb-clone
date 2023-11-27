@@ -3,30 +3,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Adjust the height as needed */
+    height: 50vh; 
   }
   
   
   .slick-slide img {
-    max-width: 100%; /* Ensure the image width doesn't exceed the container */
-    max-height: 80%; /* Maximum image height to match the slide's height */
-    object-fit: contain; /* Ensures the entire image is visible */
-    margin: auto; /* Center the image within the slide */
+    max-width: 100%; 
+    max-height: 80%; 
+    object-fit: contain; 
+    margin: auto; 
   }
   
 
   .slick-prev, .slick-next {
     color: azure;
-    font-size: 50rem; /* Adjust the size */
-    z-index: 1; /* Make sure arrows are above other elements */
+    font-size: 50rem; 
+    z-index: 1; 
   }
   
   .slick-prev:before, .slick-next:before {
-    color: green; /* Color of the arrows */
+    color: green; 
   }
 
   
-  /* If arrows are not visible, you might need to increase the z-index */
   .slick-prev, .slick-next {
     z-index: 1000;
   }
