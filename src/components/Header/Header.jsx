@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import "./Header.css";
+
 import Logo from "../../assets/img/IMDB_logo.PNG";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import Sidebar from "../Sidebar/Sidebar";
 import SearchInput from "../SearchInput/SearchInput";
 
+import { Container, Content, LogoContainer } from "./Header.styles";
+import "./Header.css";
 const Header = ({ isAuthenticated, handleAuth, onSearch }) => {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
 
@@ -17,14 +19,14 @@ const Header = ({ isAuthenticated, handleAuth, onSearch }) => {
   };
 
   return (
-    <header className="header">
-      <div className="header-content">
+    <Container>
+      <Content>
         <HamburgerMenu isActive={isSidebarActive} onClick={toggleSidebar} />
         <Sidebar isActive={isSidebarActive} onClick={closeSidebar} />
 
-        <div className="logo">
+        <LogoContainer>
           <img src={Logo} alt="Logo" />
-        </div>
+        </LogoContainer>
 
         <SearchInput onSearch={onSearch} />
 
@@ -35,8 +37,8 @@ const Header = ({ isAuthenticated, handleAuth, onSearch }) => {
             <button onClick={handleAuth}>Sign In</button>
           )}
         </div>
-      </div>
-    </header>
+      </Content>
+    </Container>
   );
 };
 

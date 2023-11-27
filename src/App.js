@@ -7,7 +7,7 @@ import SearchResults from "./components/SearchResults/SearchResults";
 import MovieList from "./components/MovieList/MovieList";
 import HomePage from "./components/pages/HomePage/HomePage";
 
-import AppContainer from "./AppContainer";
+import AppContainer from "./AppContainer.styles";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

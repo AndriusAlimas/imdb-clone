@@ -1,38 +1,16 @@
-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    padding: 0.625rem 1.25rem;
-    width: 100%;
-  }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    width: 100%;
-    max-width: 80%; 
-    margin: 0 auto;
-  }
+
   
   .hamburger-menu {
     font-size: 1.5rem;
     order: 1; 
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    order: 2; 
-    margin-left: 1rem; 
-  }
+
   .search-bar {
     flex-grow: 1; 
     margin: 0 auto; 
     max-width: 50%; 
-    order: 3; 
+    order: 1; 
   }
   
   .search-bar input {
