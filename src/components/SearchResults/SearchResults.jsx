@@ -1,9 +1,10 @@
 import React from "react";
 import "./SearchResults.css";
+import { SearchResultsContainer } from "./SearchResultsContainer.styles";
 
-const SearchResults = ({ results }) => {
+const SearchResults = ({ results, isVisible }) => {
   return (
-    <div className="search-results">
+    <SearchResultsContainer isVisible={isVisible}>
       {results.map((movie, index) => (
         <div key={index} className="search-result-item">
           <img src={movie.image} alt={movie.title} className="movie-poster" />
@@ -13,7 +14,7 @@ const SearchResults = ({ results }) => {
           </div>
         </div>
       ))}
-    </div>
+    </SearchResultsContainer>
   );
 };
 

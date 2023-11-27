@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { debounce } from "lodash";
 import "./SearchInput.css";
+
 const SearchInput = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [debouncedTerm, setDebouncedTerm] = useState(searchTerm);
+
+  const debouncedOnSearch = debounce(onSearch, 500);
 
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      setDebouncedTerm(searchTerm);
-    }, 500);
+    if (searchTerm === "") {
+      onSearch("");
+    } else {
+      debouncedOnSearch(searchTerm);
+    }
 
     return () => {
-      clearTimeout(timerId);
+      debouncedOnSearch.cancel();
     };
-  }, [searchTerm]);
-
-  useEffect(() => {
-    if (debouncedTerm && onSearch) {
-      onSearch(debouncedTerm);
-    }
-  }, [debouncedTerm, onSearch]);
+  }, [searchTerm, onSearch, debouncedOnSearch]);
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);

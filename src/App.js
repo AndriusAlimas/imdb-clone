@@ -12,18 +12,20 @@ import AppContainer from "./AppContainer.styles";
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
-
+  const [showResults, setShowResults] = useState(false);
   const handleAuth = () => {
     setIsAuthenticated(!isAuthenticated);
   };
 
   const handleSearch = useCallback(async (search) => {
-    if (!search) {
+    if (search) {
+      const results = await searchMovies(search);
+      setSearchResults(results);
+      setShowResults(true);
+    } else {
       setSearchResults([]);
-      return;
+      setShowResults(false);
     }
-    const results = await searchMovies(search);
-    setSearchResults(results);
   }, []);
 
   const debouncedSearch = useCallback(
@@ -32,15 +34,25 @@ function App() {
     }, 500),
     []
   );
+  const handleInputChange = (searchTerm) => {
+    if (searchTerm === "") {
+      setSearchResults([]);
+      setShowResults(false);
+    } else {
+      debouncedSearch(searchTerm);
+    }
+  };
 
   return (
     <AppContainer>
       <Header
         isAuthenticated={isAuthenticated}
         handleAuth={handleAuth}
-        onSearch={debouncedSearch}
+        onSearch={handleInputChange}
       />
-      {searchResults.length > 0 && <SearchResults results={searchResults} />}
+      {showResults && searchResults.length > 0 && (
+        <SearchResults results={searchResults} isVisible={showResults} />
+      )}
       <HomePage />
       <main>
         <MovieList />

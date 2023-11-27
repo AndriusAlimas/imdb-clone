@@ -1,9 +1,5 @@
 
-  
-  .hamburger-menu {
-    font-size: 1.5rem;
-    order: 1; 
-  }
+ 
   
 
   .search-bar {
@@ -37,9 +33,9 @@
     margin-left: 0.625rem;
   }
   
-  .auth-button:hover {
-    background-color: #dbac07;
-  }
+ .search-result-item{
+  max-width: fit-content;
+ }
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
